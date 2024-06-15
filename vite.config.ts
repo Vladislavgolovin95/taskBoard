@@ -9,4 +9,12 @@ export default defineConfig({
     outDir: './docs',
     emptyOutDir: true,
   },
+  resolve: {
+    alias: {
+      components: '/src/components',
+      constants: '/src/constants',
+      api: '/src/api',
+      types: '/src/types',
+    },
+  },
 });

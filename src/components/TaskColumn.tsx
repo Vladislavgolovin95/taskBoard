@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { ITasksColumn } from '../types/types';
-import { STATUSES } from '../constants/constants';
+import { ITasksColumn } from 'types/types';
+import { STATUSES } from 'constants/constants';
 import { Button } from './Button';
 
 export const TaskColumn: React.FC<ITasksColumn> = (props) => {

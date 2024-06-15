@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
-import { addTaskToFirestore, getTasksToFirestore, removeTaskToFirestore, updateTaskToFirestore } from '../api/api';
+import { addTaskToFirestore, getTasksToFirestore, removeTaskToFirestore, updateTaskToFirestore } from 'api/api';
 import { TaskColumn } from './TaskColumn';
 import { TaskForm } from './TaskForm';
-import { STATUSES } from '../constants/constants';
-import { ITask } from '../types/types';
+import { STATUSES } from 'constants/constants';
+import { ITask } from 'types/types';
 
 export const App: React.FC = () => {
   const [tasks, setTasks] = useState<ITask[]>([]);

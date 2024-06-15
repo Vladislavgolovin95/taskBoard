@@ -1,4 +1,4 @@
-import { IButton } from '../types/types';
+import { IButton } from 'types/types';
 import styled from 'styled-components';
 
 export const Button: React.FC<IButton> = (props) => {

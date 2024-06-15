@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { ITaskForm } from '../types/types';
+import { ITaskForm } from 'types/types';
 import { Button } from './Button';
 
 export const TaskForm: React.FC<ITaskForm> = (props) => {

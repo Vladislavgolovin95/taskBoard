@@ -1,6 +1,6 @@
 import { FirebaseOptions, initializeApp } from 'firebase/app';
 import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc, updateDoc } from 'firebase/firestore';
-import { ITask } from '../types/types';
+import { ITask } from 'types/types';
 
 const firebaseConfig: FirebaseOptions = {
   apiKey: 'AIzaSyBbdIUMvg9FTRHw1Ni11sY9rsubBqb0v_8',

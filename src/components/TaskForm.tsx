@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { ITaskForm } from 'types/types';
-import { Button } from './Button';
+import { Button } from 'components/Button';
 
 export const TaskForm: React.FC<ITaskForm> = (props) => {
   const { name, placeholder, onSubmit } = props;

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
 import { addTaskToFirestore, getTasksToFirestore, removeTaskToFirestore, updateTaskToFirestore } from 'api/api';
-import { TaskColumn } from './TaskColumn';
-import { TaskForm } from './TaskForm';
+import { TaskColumn } from 'components/TaskColumn';
+import { TaskForm } from 'components/TaskForm';
 import { STATUSES } from 'constants/constants';
 import { ITask } from 'types/types';
 

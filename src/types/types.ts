@@ -2,6 +2,7 @@ export interface ITask {
   id: string;
   title: string;
   status: string;
+  priority: number;
 }
 
 export interface ITasksColumn {
@@ -14,7 +15,7 @@ export interface ITasksColumn {
 export interface ITaskForm {
   name: string;
   placeholder: string;
-  onSubmit: (title: string) => void;
+  onSubmit: (title: string, priority: number) => void;
 }
 
 export interface IButton {

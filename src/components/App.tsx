@@ -14,11 +14,12 @@ export const App: React.FC = () => {
     getTasksToFirestore().then((res) => setTasks(res));
   }, []);
 
-  const onCreateTask = (title: string) => {
+  const onCreateTask = (title: string, priority: number) => {
     if (title) {
       addTaskToFirestore({
         id: uuidv4(),
         title: title,
+        priority: priority,
         status: 'TODO',
       });
       getTasksToFirestore().then((res) => setTasks(res));

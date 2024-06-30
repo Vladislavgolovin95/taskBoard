@@ -7,7 +7,6 @@ export const Button: React.FC<IButton> = (props) => {
 };
 
 const Btn = styled.button`
-  margin: auto;
   width: 80px;
   padding: 3px;
   border: 1px solid black;

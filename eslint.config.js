@@ -39,6 +39,15 @@ export default tseslint.config(
     files: ['**/*.{ts,tsx}'],
     rules: {
       ...prettierPlugin.configs.recommended.rules,
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "bracketSpacing": true,
+          "jsxBracketSameLine": false,
+          "printWidth": 120
+        }
+      ],
       ...eslintConfigPrettier.rules,
       'prefer-const': 'error',
       'react/jsx-curly-brace-presence': ['warn', { props: 'never', children: 'never' }],

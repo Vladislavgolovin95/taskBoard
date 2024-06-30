@@ -23,6 +23,7 @@ export const getTasksToFirestore = async () => {
       id: doc.data().id,
       title: doc.data().title,
       status: doc.data().status,
+      priority: doc.data().priority,
     });
   });
   return tasks;
@@ -34,6 +35,7 @@ export const addTaskToFirestore = async (task: ITask) => {
       id: task.id,
       title: task.title,
       status: task.status,
+      priority: task.priority,
     });
   } catch (err) {
     console.error('Error adding document: ', err);

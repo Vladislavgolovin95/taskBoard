@@ -2,9 +2,10 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { ITaskForm } from 'types/types';
 import { Button } from 'components/Button';
+import { Container, TextField } from '@mui/material';
 
 export const TaskForm: React.FC<ITaskForm> = (props) => {
-  const { name, placeholder, onSubmit } = props;
+  const { name, onSubmit } = props;
   const [title, setTitle] = useState('');
   const [priority, setPriority] = useState(1);
 
@@ -21,14 +22,18 @@ export const TaskForm: React.FC<ITaskForm> = (props) => {
   };
 
   return (
-    <Form>
-      <InputField
-        type="text"
+    <Container sx={{ mt: '5px', mb: '30px' }}>
+      <TextField
+        type="search"
         name={name}
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         onKeyDown={handleKeyDown}
-        placeholder={placeholder}
+        multiline
+        fullWidth
+        label="задача"
+        variant="standard"
+        sx={{ mb: '5px' }}
       />
       <ActionWrapper>
         <InputPriority
@@ -41,32 +46,10 @@ export const TaskForm: React.FC<ITaskForm> = (props) => {
         <ValuePriority>Приоритет: {priority}</ValuePriority>
         <Button onClick={onSubmitTask} text="Добавить" />
       </ActionWrapper>
-    </Form>
+    </Container>
   );
 };
 
-const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto 20px;
-  width: 400px;
-  height: 80px;
-  padding: 5px;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 5px;
-`;
-const InputField = styled.input`
-  margin-bottom: 20px;
-  height: 25px;
-  padding: 2px;
-  border-radius: 5px;
-  font-size: 15px;
-  background: transparent;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid;
-`;
 const ActionWrapper = styled.div`
   display: flex;
   justify-content: space-around;

@@ -6,6 +6,7 @@
 
 - Язык: TypeScript
 - Основная библиотека: React
+- Библиотека компонентов: Material UI
 - Стилизация: Styled Components
 - База данных: Firebase Realtime Database
 - Линтер: ESlint

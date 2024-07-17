@@ -38,7 +38,7 @@ export const App: React.FC = () => {
 
   return (
     <AppWrapper>
-      <TaskForm name="title" placeholder="Задача" onSubmit={onCreateTask} />
+      <TaskForm name="title" onSubmit={onCreateTask} />
       <Columns>
         {STATUSES.map((status) => (
           <TaskColumn

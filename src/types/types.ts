@@ -14,7 +14,6 @@ export interface ITasksColumn {
 
 export interface ITaskForm {
   name: string;
-  placeholder: string;
   onSubmit: (title: string, priority: number) => void;
 }
 

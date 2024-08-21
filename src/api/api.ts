@@ -3,12 +3,12 @@ import { collection, deleteDoc, doc, getDocs, getFirestore, setDoc, updateDoc } 
 import { ITask } from 'types/types';
 
 const firebaseConfig: FirebaseOptions = {
-  apiKey: 'AIzaSyBbdIUMvg9FTRHw1Ni11sY9rsubBqb0v_8',
-  authDomain: 'tasks-27e50.firebaseapp.com',
-  projectId: 'tasks-27e50',
-  storageBucket: 'tasks-27e50.appspot.com',
-  messagingSenderId: '589528834597',
-  appId: '1:589528834597:web:60545c35374d26427115cc',
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
 };
 
 const app = initializeApp(firebaseConfig);
